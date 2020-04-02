@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+         http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+         version="2.4">
+
+
+    <servlet>
+        <servlet-name>ShowAdsServlet</servlet-name>
+        <servlet-class>servlets.ShowAdsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShowAdsServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SignInController</servlet-name>
+        <servlet-class>servlets.SignInServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SignInController</servlet-name>
+        <url-pattern>/signin</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>SignOut</servlet-name>
+        <servlet-class>servlets.SignOutServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SignOut</servlet-name>
+        <url-pattern>/signout</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>SignUp</servlet-name>
+        <servlet-class>servlets.SignUpServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SignUp</servlet-name>
+        <url-pattern>/signup</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>createAd</servlet-name>
+        <servlet-class>servlets.CreateAdServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>createAd</servlet-name>
+        <url-pattern>/createAd</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>editAd</servlet-name>
+        <servlet-class>servlets.EditAdServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>editAd</servlet-name>
+        <url-pattern>/editAd</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>editUser</servlet-name>
+        <servlet-class>servlets.EditUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>editUser</servlet-name>
+        <url-pattern>/editUser</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>showusers</servlet-name>
+        <servlet-class>servlets.ShowUsersServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>showusers</servlet-name>
+        <url-pattern>/showusers</url-pattern>
+    </servlet-mapping>
+
+
+
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.css</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.js</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.jpg</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.png</url-pattern>
+    </servlet-mapping>
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>default</servlet-name>-->
+<!--        <url-pattern>*.html</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+</web-app>
+
