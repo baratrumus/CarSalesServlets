@@ -13,47 +13,52 @@
 
     <style><%@include file="/css/style.css"%></style>
 
-    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/signup.js"></script>
+<%--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>--%>
 
 </head>
 
 <body>
-<form id="form1"  class="form_sign_up" method='post' action="${pageContext.servletContext.contextPath}/signup">
+<form id="form1"  class="form_sign_up" method='post'  onsubmit="return validate()" action="${pageContext.servletContext.contextPath}/signup">
     <c:if test="${error != ''}">
         <div style = "background-color: darksalmon">
             <c:out value="${error}" />
         </div>
     </c:if>
 
-    <h2>Sign up</h2>
+    <h2><span class="centred">Sign up</span></h2>
 
-    <table><tr><td>
-    <b>Login:</b></td>
-    <td><input type="text" name='login' id="login" placeholder="Login" required>
-    </td></tr>
+    <table class="table1"><tbody>
+    <tr><td></td>
+        <td><div id="loginError"></div></td></tr>
+    <tr><td><b>Login:</b></td>
+    <td><input type="text"  class="form-control" name='login' id="login" placeholder="Login"></td>
+    </tr>
 
-    <tr><td>
-     <b>Password:</b></td>
-     <td><input type="password" name='password' id="password" placeholder="Password" required>
+    <tr><td></td>
+        <td><div id="passError"></div></td></tr>
+    <tr><td><b>Password:</b></td>
+     <td><input type="password"  class="form-control" name='password' id="password" placeholder="Password">
      </td></tr>
 
-    <tr><td>
-    <b>Email:</b></td>
-    <td><input type="email" name='email' id="email" placeholder="Email" required>
+    <tr><td></td>
+        <td><div id="emailError"></div></td></tr>
+    <tr>
+        <td><b>Email:</b></td>
+    <td><input type="email"  class="form-control" name='email' id="email" placeholder="Email">
     </td></tr>
 
-<%--        pattern="[+]{1}[0-9]{11,14}"--%>
-    <tr><td>
-    <b>Phone:</b><br></td>
-    <td><input type="tel" id="phone" name="phone" pattern="[+]{1}[0-9]{7-14}" placeholder="+71715717177" required>
-    </td></tr>
-
+    <tr><td></td>
+        <td><div id="phoneError"></div></td></tr>
+    <tr>
+        <td><b>Phone:</b><br></td>
+    <td><input type="text" class="form-control" name='phone' id="phone"> </td></tr>
     <tr><td><div class="spaceFill">
 
     </div></td></tr>
 
         <input type='hidden' name='created' value=''/><br>
-    </table>
+    </tbody></table>
 
     <input class="button1"  type='submit' value='Create'/>
     <input class="button1"  type='button' value='Main page' onclick="toMain()"/>

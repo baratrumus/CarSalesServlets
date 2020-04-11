@@ -13,7 +13,7 @@ body {
     overflow:visible;
     max-width: 98%;
     position: relative;
-    margin-top: 0px;
+    margin-top: 0;
     height: 40px;
 }
 
@@ -32,6 +32,16 @@ body {
     margin-top:10px
 }
 
+input .errClass {
+    border-color: red;
+    border: 1px solid red;
+}
+
+input .successClass {
+    /*border-color: lightgreen;*/
+    border: 1px solid lightgreen;
+}
+
 
 .spaceFill {
     height: 40px;
@@ -45,6 +55,18 @@ body {
     text-align: center;
     vertical-align: center;
 }
+
+span .centred {
+    text-align: center;
+    vertical-align: center;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    margin: 0 auto;
+}
+
 
 
 .form_sign_up {
@@ -104,8 +126,13 @@ body {
 
 
 .table {
+    margin-top: 20px;
     table-layout: fixed;
     background-color: antiquewhite;
+}
+
+.table1 {
+    margin-top: 30px;
 }
 
 .green {

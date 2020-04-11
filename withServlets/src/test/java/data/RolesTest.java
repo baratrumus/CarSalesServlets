@@ -14,7 +14,7 @@ public class RolesTest {
     private static final Db STORAGE = DbHibernate.getInstance();
 
     @Test
-//    @Ignore
+    @Ignore
     public void adARole() {
         Roles role = new Roles(4, "test");
         boolean i = STORAGE.addNewRole(role);

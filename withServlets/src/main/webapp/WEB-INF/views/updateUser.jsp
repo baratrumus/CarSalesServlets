@@ -16,42 +16,50 @@
 
     <style><%@include file="/css/style.css"%></style>
 
-    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/signup.js"></script>
 </head>
 
 <body>
-<form id="editForm"   class="form_sign_up"  method='post' action="${pageContext.servletContext.contextPath}/editUser">
-    <h2>User update</h2>
+<form id="editForm" class="form_sign_up" method='post' onsubmit="return validate()" action="${pageContext.servletContext.contextPath}/editUser">
+
         <c:if test="${error != ''}">
             <div style = "background-color: darksalmon">
                 <c:out value="${error}" />
             </div>
         </c:if>
 
-        <table><tr><td>
-            <b>Login:</b></td>
+    <h2><span class="centred">User update</span></h2>
+
+        <table class="table1"><tbody>
+        <tr><td></td>
+            <td><div id="loginError"></div></td></tr>
+        <tr><td><b>Login:</b></td>
             <td><input type="text" name='login' id="login" value="<c:out value="${user.getLogin()}"/>"><br>
             </td></tr>
 
-            <tr><td>
-                <b>Password:</b></td>
+
+        <tr><td></td>
+            <td><div id="passError"></div></td></tr>
+        <tr><td> <b>Password:</b></td>
                 <td><input type="password" name='password' id="password"  value="<c:out value="${user.getPassword()}"/>"><br>
                 </td></tr>
 
-            <tr><td>
-                <b>Email:</b></td>
+        <tr><td></td>
+            <td><div id="emailError"></div></td></tr>
+        <tr><td><b>Email:</b></td>
                 <td><input type="email" name='email' id="email" value="<c:out value="${user.getEmail()}"/>"><br>
                 </td></tr>
 
-            <tr><td>
-                <b>Phone:</b><br></td>
+        <tr><td></td>
+            <td><div id="phoneError"></div></td></tr>
+        <tr><td><b>Phone:</b><br></td>
                 <td><input type="tel" id="phone" name="phone" pattern="[+]{1}[0-9]{7-14}"  value="<c:out value="${user.getPhone()}"/>"><br>
                 </td></tr>
 
             <tr><td><div class="spaceFill">
 
             </div></td></tr>
-        </table>
+        </tbody></table>
 
         <c:if test="${userIdfromAdm != null}">
             <input type="hidden" name='userIdfromAdm' value="<c:out value="${user.getId()}" />">

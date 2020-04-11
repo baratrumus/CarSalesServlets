@@ -38,9 +38,9 @@
         </div>
     </c:if>
 
-    <h2>Please sign in</h2>
+    <h2><span class="centred">Please sign in</span></h2>
 
-    <table><tr><td>
+    <table class="table1"><tr><td>
         <b>Login:</b></td>
         <td><input type="text" name='login' id="login" placeholder="Login" required>
         </td></tr>

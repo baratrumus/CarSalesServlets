@@ -96,13 +96,15 @@ public class EditAdServlet  extends HttpServlet {
      *  Стрим в байтовый массив
      */
     private byte[] streamToByteArray(FileItem file) throws IOException {
-        InputStream is = file.getInputStream();
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        int reads = is.read();
-        while (reads != -1) {
-            baos.write(reads);
-            reads = is.read();
+        try (InputStream is = file.getInputStream(); ByteArrayOutputStream baos = new ByteArrayOutputStream()){
+            int reads = is.read();
+            while (reads != -1) {
+                baos.write(reads);
+                reads = is.read();
+            }
+            return baos.toByteArray();
+        } catch (IOException ioe) {
+            throw new IOException("Error when read " + file.getName());
         }
-        return baos.toByteArray();
     }
 }
