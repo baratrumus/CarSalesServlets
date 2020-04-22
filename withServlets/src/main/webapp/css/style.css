@@ -135,6 +135,34 @@ h2 {
     margin-top: 30px;
 }
 
+div .centred_preview {
+    /*width: 300px;*/
+    height: 300px;
+    line-height: 300px;
+    display: flex;
+    justify-content: center; /*центрируем элемент по горизонтали */
+    align-items: center; /* и вертикали */
+    overflow: hidden;
+    border: 2px solid #000;
+}
+
+.centred_preview img {
+    vertical-align: middle;
+    position: absolute;
+    margin: auto;
+    width: border-box;
+    transform: scale(1,1);
+    transition: 0.3s ease;
+}
+
+.centred_preview:hover img {
+    transform: scaleX(1.5) scaleY(1.5);
+}
+
+/*.car_image {*/
+/*    align-self:center;*/
+/*}*/
+
 .green {
     color : green;
     font-size: 18px;

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?carsale version="1.0" encoding="ISO-8859-1" ?>
 <web-app xmlns="http://java.sun.com/xml/ns/j2ee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
@@ -8,7 +8,7 @@
 
     <servlet>
         <servlet-name>ShowAdsServlet</servlet-name>
-        <servlet-class>servlets.ShowAdsServlet</servlet-class>
+        <servlet-class>carsale.servlets.ShowAdsServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ShowAdsServlet</servlet-name>
@@ -17,7 +17,7 @@
 
     <servlet>
         <servlet-name>SignInController</servlet-name>
-        <servlet-class>servlets.SignInServlet</servlet-class>
+        <servlet-class>carsale.servlets.SignInServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -28,7 +28,7 @@
 
     <servlet>
         <servlet-name>SignOut</servlet-name>
-        <servlet-class>servlets.SignOutServlet</servlet-class>
+        <servlet-class>carsale.servlets.SignOutServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -39,7 +39,7 @@
 
     <servlet>
         <servlet-name>SignUp</servlet-name>
-        <servlet-class>servlets.SignUpServlet</servlet-class>
+        <servlet-class>carsale.servlets.SignUpServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>SignUp</servlet-name>
@@ -49,7 +49,7 @@
 
     <servlet>
         <servlet-name>createAd</servlet-name>
-        <servlet-class>servlets.CreateAdServlet</servlet-class>
+        <servlet-class>carsale.servlets.CreateAdServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>createAd</servlet-name>
@@ -59,7 +59,7 @@
 
     <servlet>
         <servlet-name>editAd</servlet-name>
-        <servlet-class>servlets.EditAdServlet</servlet-class>
+        <servlet-class>carsale.servlets.EditAdServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>editAd</servlet-name>
@@ -69,7 +69,7 @@
 
     <servlet>
         <servlet-name>editUser</servlet-name>
-        <servlet-class>servlets.EditUserServlet</servlet-class>
+        <servlet-class>carsale.servlets.EditUserServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>editUser</servlet-name>
@@ -79,7 +79,7 @@
 
     <servlet>
         <servlet-name>showusers</servlet-name>
-        <servlet-class>servlets.ShowUsersServlet</servlet-class>
+        <servlet-class>carsale.servlets.ShowUsersServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>showusers</servlet-name>

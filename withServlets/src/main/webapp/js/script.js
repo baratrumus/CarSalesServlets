@@ -25,7 +25,7 @@ function getModelsById(brand_id) {
             console.log(data.responseText);
             var modelsList = JSON.parse(data.responseText);
             console.log(modelsList);
-            var selectModels = $('#models');
+            var selectModels = $('#carsale.models');
             selectModels.find("option").remove();
             $.each(modelsList, function (key, value) {
                 var id = value.id;
@@ -39,13 +39,13 @@ function getModelsById(brand_id) {
 }
 
 function validateNewAd() {
-    console.log($('#models').val());
+    console.log($('#carsale.models').val());
     console.log(document.getElementById('brands').value);
     console.log($('#caryear').val());
     console.log($('#color').val());
 
 
-    if (($('#models').val() === '') || ($('#models').val()=== null))  {
+    if (($('#carsale.models').val() === '') || ($('#carsale.models').val()=== null))  {
         alert('Fill the field <Model>');
         return false;
     }

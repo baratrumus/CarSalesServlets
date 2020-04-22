@@ -187,7 +187,7 @@
                 <th scope="col" width="10%">Creation date</th>
                 <th scope="col" width="10%">Car</th>
                 <th scope="col" width="20%">Description</th>
-                <th scope="col" width="220px">Photo</th>
+                <th scope="col">Photo</th>
             </tr>
         </thead>
 
@@ -207,8 +207,8 @@
            </c:if>
 
           <div style="margin-top: 20px;"/>
-               <button type="button" data-toggle="collapse"
-                       data-target="#collapse1<c:out value="${ad.getId()}" />"
+               <button type="button" xml.data-toggle="collapse"
+                       xml.data-target="#collapse1<c:out value="${ad.getId()}" />"
                        aria-expanded="false" aria-controls="collapse1<c:out value="${ad.getId()}" />">
                    Contacts
                </button>
@@ -265,13 +265,14 @@
             <c:set var="stringLength" scope="page">${ad.getPhotoBase64().length()}</c:set>
 
 
-            <td style="margin-right: 10px; vertical-align: middle">
-                <c:if test="${stringLength == 0}">
-                    <img src="${baseUrl}/img/noPhoto.jpg" width="200px" />
-                </c:if>
-                <c:if test="${stringLength != 0}">
-                    <img src="data:image/jpg;base64, <c:out value="${ad.getPhotoBase64()}" />"  width="200px"/>
-                </c:if>
+            <td><div  class="centred_preview" >
+                    <c:if test="${stringLength == 0}">
+                        <img class="car_image" src="${baseUrl}/img/noPhoto.jpg"/>
+                    </c:if>
+                    <c:if test="${stringLength != 0}">
+                        <img src="carsale.data:image/jpg;base64, <c:out value="${ad.getPhotoBase64()}" />"  width="200px"/>
+                    </c:if>
+                </div>
             </td>
 
 

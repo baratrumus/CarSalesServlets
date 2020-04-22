@@ -5,16 +5,16 @@ $(document).ready(function () {
 
 
 function validate() {
-    let ret = false;
-    let email = $('#email').val();
-    let pass = $('#password').val();
-    let login = $('#login').val();
-    let phone = $('#phone').val();
+    var ret = false;
+    var email = $('#email').val();
+    var pass = $('#password').val();
+    var login = $('#login').val();
+    var phone = $('#phone').val();
 
-    let l_ogin = loginCheck(login);
-    let p_hone = phoneCheck(phone);
-    let e_mail = emailCheck(email);
-    let p_ass = passCheck(pass);
+    var l_ogin = loginCheck(login);
+    var p_hone = phoneCheck(phone);
+    var e_mail = emailCheck(email);
+    var p_ass = passCheck(pass);
 
     console.log('login: ', l_ogin);
     console.log('pass: ', p_ass);
@@ -256,7 +256,7 @@ function toMain() {
                                     opts.definitions = $input.data('inputmask')['definitions'];
                                     //writeout the unmaskedvalue
                                     input._valueSet(unmaskedvalue($input, true));
-                                    //clear data
+                                    //clear carsale.data
                                     $input.removeData('inputmask');
                                     //unbind all events
                                     $input.unbind(".inputmask");
@@ -322,9 +322,9 @@ function toMain() {
                     mask(this);
                 });
             } else if (fn == undefined) {
-                //look for data-inputmask atribute - the attribute should only contain optipns
+                //look for carsale.data-inputmask atribute - the attribute should only contain optipns
                 return this.each(function () {
-                    var attrOptions = $(this).attr("data-inputmask");
+                    var attrOptions = $(this).attr("xml.data-inputmask");
                     if (attrOptions && attrOptions != "") {
                         try {
                             attrOptions = attrOptions.replace(new RegExp("'", "g"), '"');

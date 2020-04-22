@@ -21,7 +21,7 @@
 <body>
 
 
-<form id="adForm"   class="form_sign_up" onsubmit="return validateNewAd()"  method='post' action="${pageContext.servletContext.contextPath}/createAd"  enctype="multipart/form-data">
+<form id="adForm"   class="form_sign_up" onsubmit="return validateNewAd()"  method='post' action="${pageContext.servletContext.contextPath}/createAd"  enctype="multipart/form-carsale.data">
         <h2>Create advertisment</h2>
 
         <table class="table"><tr><td>
@@ -37,7 +37,7 @@
 
             <tr><td><b>Model:</b></td>
 
-                <td><select id="models" name="models" width="100px">
+                <td><select id="xml.models" name="xml.models" width="100px">
 
                 </select>
                 </td></tr>

@@ -20,7 +20,7 @@
 
 </head>
 <body>
-    <form id="editForm"   class="form_sign_up"  method='post' action="${pageContext.servletContext.contextPath}/editAd"  enctype="multipart/form-data">
+    <form id="editForm"   class="form_sign_up"  method='post' action="${pageContext.servletContext.contextPath}/editAd"  enctype="multipart/form-carsale.data">
         <h2>Edit advertisment</h2>
         <input type="hidden" name='adId' value="<c:out value="${ad.getId()}" />">
 
