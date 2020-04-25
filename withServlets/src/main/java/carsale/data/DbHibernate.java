@@ -27,10 +27,11 @@ public class DbHibernate implements Db {
 
     private static final HibernateUtil HUTIL = HibernateUtil.getInstance();
     private SessionFactory sessionFactory = HUTIL.getSessionConf();
-    private PopulateModels models;
+    //private PopulateModels models;
 
     public DbHibernate() {
-        this.models = new PopulateModels();
+
+        //this.models = new PopulateModels();
     }
 
 

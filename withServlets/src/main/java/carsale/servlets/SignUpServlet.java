@@ -37,8 +37,7 @@ public class SignUpServlet extends HttpServlet {
             String email = req.getParameter("email");
             String phone = req.getParameter("phone");
 
-            Users user = new Users(login, password, email, phone);
-            user.setRole(controller.getAllRoles().get(1));
+            Users user = new Users(login, password, email, phone, controller.getAllRoles().get(1));
 
        /*
         String email1 = URLDecoder.decode(paramMap.get("email"), "UTF-8");

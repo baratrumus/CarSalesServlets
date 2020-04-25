@@ -49,11 +49,12 @@ public class Users {
     public Users() {
     }
 
-    public Users(String login, String password, String email, String phone) {
+    public Users(String login, String password, String email, String phone, Roles role) {
         this.login = login;
         this.password = password;
         this.email = email;
         this.phone = phone;
+        this.role = role;
     }
 
     public Users(String login, String password) {

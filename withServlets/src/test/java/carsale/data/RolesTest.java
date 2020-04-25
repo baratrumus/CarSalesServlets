@@ -13,7 +13,7 @@ public class RolesTest {
     @Test
     @Ignore
     public void adARole() {
-        Roles role = new Roles(4, "test");
+        Roles role = new Roles("test");
         boolean i = STORAGE.addNewRole(role);
         assertThat(role, is(this.STORAGE.getRoleById(role.getId())));
     }

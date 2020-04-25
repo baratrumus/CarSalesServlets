@@ -27,17 +27,17 @@ public class PopulateModels {
         if (checkIfTableIsEmpty("roles")) {
             Session session = sessionFactory.openSession();
             session.beginTransaction();
-            Roles role = new Roles(1, "Guest");
+            Roles role = new Roles("Guest");
             session.save(role);
             session.getTransaction().commit();
 
             session.beginTransaction();
-            role = new Roles(2, "User");
+            role = new Roles("User");
             session.save(role);
             session.getTransaction().commit();
 
             session.beginTransaction();
-            role = new Roles(3, "Admin");
+            role = new Roles("Admin");
             session.save(role);
             session.getTransaction().commit();
 

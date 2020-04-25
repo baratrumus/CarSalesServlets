@@ -1,9 +1,6 @@
 package carsale.data;
 
-import carsale.models.Ads;
-import carsale.models.Brands;
-import carsale.models.Car;
-import carsale.models.Users;
+import carsale.models.*;
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -16,11 +13,13 @@ public class AdsTest {
     private static final Db STORAGE = DbHibernate.getInstance();
 
     @Test
-   // @Ignore
+    @Ignore
     public void adAdd() {
-        Users user = new Users("tu", "tu");
+        Roles role = STORAGE.getAllRoles().get(1);
+        Users user = new Users("test", "test", "test@t.tu", "+7888566", role);
         Brands br = STORAGE.getBrandById(1);
-        Car car = new Car(STORAGE.getBrandById(1), STORAGE.getModelById(1), STORAGE.getBodyById(1), STORAGE.getEngineById(1), "f", "f");
+        Models m = STORAGE.getModelById(1);
+        Car car = new Car(br, m, STORAGE.getBodyById(1), STORAGE.getEngineById(1), "f", "f");
         Ads ad = new Ads(user, car);
         boolean i = STORAGE.addNewItem(ad);
         List<Ads> li = STORAGE.getAllItems();
