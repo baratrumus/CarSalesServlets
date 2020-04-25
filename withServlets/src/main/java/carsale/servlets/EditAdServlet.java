@@ -65,14 +65,14 @@ public class EditAdServlet  extends HttpServlet {
             items.stream().filter(FileItem::isFormField).forEach(i -> textParams.put(i.getFieldName(), i.getString()));
         } catch (FileUploadException e) {
             System.out.println(e.getMessage());
-            this.LOG.error(e.getMessage(), e);
+            LOG.error(e.getMessage(), e);
         }
 
         String adId = textParams.get("adId");
         Ads ad = controller.getAdById(adId);
 
         ad.setDescr(textParams.get("description"));
-        ad.setPrice(textParams.get("price"));
+        ad.setPrice(Integer.parseInt(textParams.get("price")));
         ad.setSold(Boolean.valueOf(textParams.get("isSold")));
         if (byteArr.length != 0) {
             ad.setPhoto(byteArr);

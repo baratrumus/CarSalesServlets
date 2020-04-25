@@ -83,7 +83,7 @@ public class CreateAdServlet extends HttpServlet {
             items.stream().filter(FileItem::isFormField).forEach(i -> textParams.put(i.getFieldName(), i.getString()));
         } catch (FileUploadException e) {
             System.out.println(e.getMessage());
-            this.LOG.error(e.getMessage(), e);
+            LOG.error(e.getMessage(), e);
         }
 
         Users user = controller.getUserById(session.getAttribute("id").toString());
@@ -99,7 +99,7 @@ public class CreateAdServlet extends HttpServlet {
         boolean isCar = controller.createCar(carDetails);
 
         Ads ad = new Ads(user, carDetails, textParams.get("description"),
-               dateNow, false, byteArr, textParams.get("price"));
+               dateNow, false, byteArr, Integer.parseInt(textParams.get("price")));
 
         if (controller.addItem(ad)) {
             req.setAttribute("adCreated", "yes");
@@ -116,7 +116,7 @@ public class CreateAdServlet extends HttpServlet {
             blob = new SerialBlob(ba);
         } catch (SQLException se) {
             System.out.println(se.getMessage());
-            this.LOG.error(se.getMessage(), se);
+            LOG.error(se.getMessage(), se);
         }
         return blob;
     }

@@ -38,7 +38,7 @@
                 <db.url>jdbc:postgresql://localhost:5432/hiberItems?serverTimezone=UTC</db.url>
                 <db.username>postgres</db.username>
                 <db.password>dfghjk</db.password>
-                <db.dialect>org.hibernate.dialect.PostgreSQL10Dialect</db.dialect>
+                <db.dialect>org.hibernate.dialect.PostgreSQL94Dialect</db.dialect>
 
                 <spring.db.profile>postgres</spring.db.profile>
             </properties>

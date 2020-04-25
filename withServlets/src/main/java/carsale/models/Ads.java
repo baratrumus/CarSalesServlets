@@ -52,16 +52,16 @@ public class Ads {
     private byte[] fileimage;
 
     @Column(name = "price")
-    private String price;
+    private Integer price;
 
     @Transient
-    boolean photoExists;
+    private boolean photoExists;
 
 
     public Ads() {
     }
 
-    public Ads(Users userId, Car carDetails, String descr, Timestamp created, Boolean sold, byte[] fileimage, String price) {
+    public Ads(Users userId, Car carDetails, String descr, Timestamp created, Boolean sold, byte[] fileimage, Integer price) {
         this.userId = userId;
         this.carDetails = carDetails;
         this.descr = descr;
@@ -71,9 +71,13 @@ public class Ads {
         this.price = price;
     }
 
-    public Ads(Users userId, Car carDetails) {
+    public Ads(Users userId, Car carDetails, String descr, Timestamp created, Boolean sold, Integer price) {
         this.userId = userId;
         this.carDetails = carDetails;
+        this.descr = descr;
+        this.created = created;
+        this.sold = sold;
+        this.price = price;
     }
 
     public Integer getId() {
@@ -124,11 +128,11 @@ public class Ads {
         this.fileimage = fileimage;
     }
 
-    public String getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(Integer price) {
         this.price = price;
     }
 
@@ -145,8 +149,7 @@ public class Ads {
     }
 
     public String getPhotoBase64() {
-        String imgString  = Base64.getEncoder().encodeToString(fileimage);
-        return imgString;
+        return  Base64.getEncoder().encodeToString(fileimage);
     }
 
     public boolean isPhotoExists() {
