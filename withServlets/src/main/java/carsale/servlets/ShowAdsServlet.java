@@ -54,10 +54,6 @@ public class ShowAdsServlet extends HttpServlet {
 
         List<Ads> listOfAds = controller.getAllItems();
 
-        int i  = listOfAds.get(0).getPhoto().length;
-        int i1  = listOfAds.get(1).getPhoto().length;
-        int i2  = listOfAds.get(2).getPhoto().length;
-
         List<Ads> filterList = new ArrayList<>();
         filterList.addAll(listOfAds);
         LocalDate now = LocalDate.now();
@@ -80,7 +76,7 @@ public class ShowAdsServlet extends HttpServlet {
                 }
             }
             if (withPhoto != null) {
-                if (ad.getPhoto().length == 0) {
+                if (ad.getPhoto() == null) {
                     filterList.remove(ad);
                 }
             }

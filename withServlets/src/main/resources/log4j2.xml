@@ -1,4 +1,4 @@
-<?carsale version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!-- указываем, что логгер будет обрабатывать все исключения с уровень WARN и выше. Т.е. warn и error -->
 <!-- trace debug info warn error -->

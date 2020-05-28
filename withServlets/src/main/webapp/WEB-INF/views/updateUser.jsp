@@ -7,7 +7,7 @@
     <title>Update</title>
     <meta charset='UTF-8'>
 
-    <title>Create advertisment</title>
+    <title>User update</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -64,8 +64,6 @@
         <c:if test="${userIdfromAdm != null}">
             <input type="hidden" name='userIdfromAdm' value="<c:out value="${user.getId()}" />">
         </c:if>
-
-
 
         <input class="button1"  type='submit' value='Update'/>
         <input class="button1"  type='button' value='Main page' onclick="toMain()"/>

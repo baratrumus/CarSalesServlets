@@ -54,10 +54,6 @@ public class Ads {
     @Column(name = "price")
     private Integer price;
 
-    @Transient
-    private boolean photoExists;
-
-
     public Ads() {
     }
 
@@ -153,13 +149,8 @@ public class Ads {
     }
 
     public boolean isPhotoExists() {
-        return photoExists;
+        return (getPhoto() == null) ? false : true;
     }
-
-    public void setPhotoExists(boolean photoExists) {
-        this.photoExists = photoExists;
-    }
-
 
     @Override
     public String toString() {

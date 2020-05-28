@@ -86,11 +86,12 @@ public class CreateAdServlet extends HttpServlet {
             LOG.error(e.getMessage(), e);
         }
 
-        Users user = controller.getUserById(session.getAttribute("id").toString());
+        String id = session.getAttribute("id").toString();
+        Users user = controller.getUserById(id);
         Timestamp dateNow = new Timestamp(System.currentTimeMillis());
 
         Car carDetails = new Car(controller.getBrandById(textParams.get("brands")),
-                                 controller.getModelById(textParams.get("xml/models")),
+                                 controller.getModelById(textParams.get("models")),
                                  controller.getBodyById(textParams.get("body")),
                                  controller.getEngineById(textParams.get("engine")),
                                  textParams.get("caryear"),

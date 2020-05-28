@@ -104,9 +104,7 @@ public class DbHibernate implements Db {
         return this.wrapperBool(session -> session.delete(user));
     }
 
-    /**
-     * Get all items from carsale.data bases;
-     */
+
     @Override
     public List<Ads> getAllItems() {
         return this.wrapper(

@@ -25,7 +25,7 @@ public class HibernateUtil {
     public static SessionFactory getSessionXml() {
 
         final StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
-                .configure() // configures settings from hibernate.cfg.carsale
+                .configure() // configures settings from hibernate.cfg.xml
                 .build();
         MetadataSources sources = new MetadataSources(registry);
         sources.addAnnotatedClass(Ads.class);
@@ -63,7 +63,7 @@ public class HibernateUtil {
                 if (factory == null) {
                     try {
                         factory = new Configuration()
-                                .configure("hibernate.cfg.carsale")
+                                .configure("hibernate.cfg.xml")
                                 .buildSessionFactory();
                     } catch (HibernateException e) {
                         e.printStackTrace();

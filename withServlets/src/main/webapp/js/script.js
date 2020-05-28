@@ -25,7 +25,7 @@ function getModelsById(brand_id) {
             console.log(data.responseText);
             var modelsList = JSON.parse(data.responseText);
             console.log(modelsList);
-            var selectModels = $('#carsale.models');
+            var selectModels = $('#models');
             selectModels.find("option").remove();
             $.each(modelsList, function (key, value) {
                 var id = value.id;
@@ -39,13 +39,13 @@ function getModelsById(brand_id) {
 }
 
 function validateNewAd() {
-    console.log($('#carsale.models').val());
+    console.log($('#models').val());
     console.log(document.getElementById('brands').value);
     console.log($('#caryear').val());
     console.log($('#color').val());
 
 
-    if (($('#carsale.models').val() === '') || ($('#carsale.models').val()=== null))  {
+    if (($('#models').val() === '') || ($('#models').val()=== null))  {
         alert('Fill the field <Model>');
         return false;
     }
@@ -78,7 +78,7 @@ function showTestRoles() {
         );
 }
 
-
+// not used
 function loadOnlyUserAds() {
     var onlyDoneTasks;
     if ($('#chbUserAds').is(":checked")) {

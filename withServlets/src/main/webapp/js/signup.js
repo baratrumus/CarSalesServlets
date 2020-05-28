@@ -107,6 +107,8 @@ function toMain() {
 }
 
 
+
+
 /**
  * @license Input Mask plugin for jquery
  * http://github.com/RobinHerbots/jquery.inputmask
@@ -256,7 +258,7 @@ function toMain() {
                                     opts.definitions = $input.data('inputmask')['definitions'];
                                     //writeout the unmaskedvalue
                                     input._valueSet(unmaskedvalue($input, true));
-                                    //clear carsale.data
+                                    //clear data
                                     $input.removeData('inputmask');
                                     //unbind all events
                                     $input.unbind(".inputmask");
@@ -322,9 +324,9 @@ function toMain() {
                     mask(this);
                 });
             } else if (fn == undefined) {
-                //look for carsale.data-inputmask atribute - the attribute should only contain optipns
+                //look for data-inputmask atribute - the attribute should only contain optipns
                 return this.each(function () {
-                    var attrOptions = $(this).attr("xml.data-inputmask");
+                    var attrOptions = $(this).attr("data-inputmask");
                     if (attrOptions && attrOptions != "") {
                         try {
                             attrOptions = attrOptions.replace(new RegExp("'", "g"), '"');
