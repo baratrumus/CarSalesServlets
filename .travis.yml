@@ -8,6 +8,8 @@ services:
 
 before_install:
   - cd $TRAVIS_BUILD_DIR/withSpring
+  - dir
+  - ls
   - psql -c 'create database carsDB;' -U postgres
 
 
