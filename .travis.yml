@@ -7,7 +7,7 @@ services:
   - postgresql
 
 before_install:
-  - cd withSpring
+  - cd $TRAVIS_BUILD_DIR/withSpring
   - psql -c 'create database carsDB;' -U postgres
 
 
@@ -30,3 +30,5 @@ notifications:
 env:
   global:
     - CODECOV_TOKEN="1086116b-431b-4467-b049-2ef20e8c41e9"
+
+#      cd $TRAVIS_BUILD_DIR/project
