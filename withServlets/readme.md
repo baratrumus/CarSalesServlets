@@ -1,20 +1,13 @@
-Приложение площадка продажи машин.
+## Car sales site application. Servlet version.
+Application have main page with all advertisments. This page is allowed for all users, including guests.
+Guest can sign up, sign in or use Test Role button for quick authorization and authentication .
+When authorized user appends new Ad, he chooses brand, model, bodytype, engine, photo, description, mileage, price.
+Admin can make CRUD operations on all users.
 
-Веб приложение имеет основную страницу со всеми объявлениями на продажу.
-При добавлений объявления выбираются марка, модели подгружаются через ajax, тип кузова,
-тип двигателя, фото, описание, цена.
-Добавлять объявление может только зарегистрированный и авторизованный пользователь.
-Редактировать можно свои объявления после авторизации. 
-Можно менять своим объявлениям статус на продано.
-
-Фильтры:  
-Показать только актуальные, непроданные
-Показать только мои объявления
-
-гость - просмотр всех объявлений;
-
-юзер - просмотр всех объявлений, просмотр своих объявлений, создание, редактирование, удаление объявлений, 
-редактирование своего профиля;
-
-админ - просмотр всех объявлений, просмотр своих объявлений, создание, редактирование, удаление всех объявлений, просмотр, редактирование, удаление всех пользователей;
+## Technologies
+Servlet, Filter,
+PostgreSQL, HSQLDB, Liquibase, Hibernate with Spring Data
+Junit, Mockito
+JSP, HTML, CSS, Bootstrap, Javascript, JQuery, JSON, Ajax
+SL4J, LOG4J
 
