@@ -6,10 +6,10 @@ jdk:
 services:
   - postgresql
 
+#      cd $TRAVIS_BUILD_DIR/project
+
 before_install:
-  - cd $TRAVIS_BUILD_DIR/withSpring
-  - dir
-  - ls
+  - cd /withSpring
   - psql -c 'create database carsDB;' -U postgres
 
 
@@ -33,4 +33,4 @@ env:
   global:
     - CODECOV_TOKEN="1086116b-431b-4467-b049-2ef20e8c41e9"
 
-#      cd $TRAVIS_BUILD_DIR/project
+
