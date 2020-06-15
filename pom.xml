@@ -150,7 +150,7 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <db.url>jdbc:postgresql://localhost/carsDB</db.url>
+                <db.url>jdbc:postgresql://localhost/hiberitems</db.url>
                 <db.username>postgres</db.username>
                 <db.password></db.password>
                 <db.driver>org.postgresql.Driver</db.driver>
@@ -163,7 +163,7 @@
             <id>postgres</id>
             <properties>
                 <db.driver>org.postgresql.Driver</db.driver>
-                <db.url>jdbc:postgresql://localhost:5432/hiberItems?serverTimezone=UTC</db.url>
+                <db.url>jdbc:postgresql://localhost:5432/hiberitems?serverTimezone=UTC</db.url>
                 <db.username>postgres</db.username>
                 <db.password>dfghjk</db.password>
                 <db.dialect>org.hibernate.dialect.PostgreSQL94Dialect</db.dialect>

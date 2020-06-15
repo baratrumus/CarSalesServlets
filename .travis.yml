@@ -8,7 +8,7 @@ services:
 
 
 before_install:
-  - psql -c 'create database hiberItems;' -U postgres
+  - psql -c 'create database hiberitems;' -U postgres
 
 #before_script:
 

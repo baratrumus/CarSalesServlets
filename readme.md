@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/baratrumus/CarSalesServlets.svg?branch=master)](https://travis-ci.org/baratrumus/CarSalesServlets)
+[![codecov](https://codecov.io/gh/baratrumus/CarSalesServlets/branch/master/graph/badge.svg)](https://codecov.io/gh/baratrumus/CarSalesServlets)
+
 ## Car sales site application. Version 1.0 Servlet .
 Application have main page with all advertisments. This page is allowed for all users, including guests.
 Guest can sign up, sign in or use Test Role button for quick authorization and authentication .
