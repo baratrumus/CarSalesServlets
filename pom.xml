@@ -143,9 +143,24 @@
     </dependencies>
 
     <profiles>
+
+        <profile>
+            <id>travis</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <db.url>jdbc:postgresql://localhost/carsDB</db.url>
+                <db.username>postgres</db.username>
+                <db.password></db.password>
+                <db.driver>org.postgresql.Driver</db.driver>
+            </properties>
+        </profile>
+
+
+
         <profile>
             <id>postgres</id>
-
             <properties>
                 <db.driver>org.postgresql.Driver</db.driver>
                 <db.url>jdbc:postgresql://localhost:5432/hiberItems?serverTimezone=UTC</db.url>
@@ -153,24 +168,12 @@
                 <db.password>dfghjk</db.password>
                 <db.dialect>org.hibernate.dialect.PostgreSQL94Dialect</db.dialect>
 
-                <spring.db.profile>postgres</spring.db.profile>
             </properties>
 
-            <dependencies>
-                <dependency>
-                    <groupId>org.postgresql</groupId>
-                    <artifactId>postgresql</artifactId>
-                    <version>42.2.4</version>
-                </dependency>
-            </dependencies>
         </profile>
 
         <profile>
             <id>hsqldb</id>
-
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
 
             <properties>
                 <db.driver>org.hsqldb.jdbc.JDBCDriver</db.driver>
