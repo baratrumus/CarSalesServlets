@@ -9,9 +9,8 @@ services:
 #      cd $TRAVIS_BUILD_DIR/project
 
 before_install:
-  - cd /withSpring
   - psql -c 'create database carsDB;' -U postgres
-
+  - cd /withSpring
 
 # используем режим обычного пользователя для сборки проекта.
 sudo: false
