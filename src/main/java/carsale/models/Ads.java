@@ -8,6 +8,7 @@ import javax.persistence.*;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.Base64;
+import java.util.Objects;
 
 
 /**
@@ -163,5 +164,27 @@ public class Ads {
                 ", sold=" + sold +
                 ", price=" + price +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Ads ads = (Ads) o;
+        return Objects.equals(getId(), ads.getId()) &&
+                Objects.equals(getUserId(), ads.getUserId()) &&
+                Objects.equals(getDescr(), ads.getDescr()) &&
+                Objects.equals(getCreated(), ads.getCreated()) &&
+                Objects.equals(getSold(), ads.getSold()) &&
+                Objects.equals(getPrice(), ads.getPrice());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getUserId(), getDescr(), getCreated(), getSold(), getPrice());
     }
 }

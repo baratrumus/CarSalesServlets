@@ -2,6 +2,7 @@ package carsale.models;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author Ivannikov Ilya (voldores@mail.ru)
@@ -100,5 +101,27 @@ public class Users {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Users users = (Users) o;
+        return getId().equals(users.getId()) &&
+                getLogin().equals(users.getLogin()) &&
+                getPassword().equals(users.getPassword()) &&
+                getEmail().equals(users.getEmail()) &&
+                getPhone().equals(users.getPhone());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getLogin(), getPassword(), getEmail(), getPhone());
     }
 }

@@ -48,6 +48,7 @@ CREATE TABLE car
     color    VARCHAR(255)
 );
 
+
 CREATE TABLE roles
 (
     id serial PRIMARY KEY,
@@ -69,7 +70,7 @@ CREATE TABLE carusers
 CREATE TABLE ads
 (
     id serial PRIMARY KEY,
-    descr     VARCHAR(1000)            NOT NULL,
+    descr     VARCHAR(1000)           NOT NULL,
     created   TIMESTAMP DEFAULT now() NOT NULL,
     fileimage bytea,
     price     INT    NOT NULL,
