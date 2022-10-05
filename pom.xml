@@ -11,7 +11,7 @@
 
 
     <properties>
-        <jackson.core>2.10.0.pr1</jackson.core>
+        <jackson.core>2.12.6.1</jackson.core>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
